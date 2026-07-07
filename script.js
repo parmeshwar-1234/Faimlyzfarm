@@ -5,6 +5,9 @@ const cartButton = document.querySelector(".cart-button span");
 const cartActions = document.querySelectorAll(".add-cart");
 const partnerForm = document.querySelector(".partner-form");
 const newsletter = document.querySelector(".newsletter");
+const productSwitch = document.querySelector(".product-switch");
+const themeMenus = document.querySelectorAll(".theme-menu-panel");
+const themeCopy = document.querySelectorAll("[data-theme-copy]");
 
 let cartCount = 0;
 
@@ -20,6 +23,7 @@ megaItems.forEach((item) => {
 
   trigger?.addEventListener("click", () => {
     const isOpen = !item.classList.contains("mega-open");
+    document.body.classList.toggle("mega-menu-open", isOpen);
 
     megaItems.forEach((menuItem) => {
       menuItem.classList.remove("mega-open");
@@ -33,7 +37,7 @@ megaItems.forEach((item) => {
 
 document.querySelectorAll(".site-nav a").forEach((link) => {
   link.addEventListener("click", () => {
-    document.body.classList.remove("nav-open");
+    document.body.classList.remove("nav-open", "mega-menu-open");
     menuToggle?.setAttribute("aria-expanded", "false");
     megaItems.forEach((item) => item.classList.remove("mega-open"));
   });
@@ -41,11 +45,33 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
 
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".mega-item")) {
+    document.body.classList.remove("mega-menu-open");
     megaItems.forEach((item) => {
       item.classList.remove("mega-open");
       item.querySelector(".mega-trigger")?.setAttribute("aria-expanded", "false");
     });
   }
+});
+
+productSwitch?.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  const theme = button.dataset.themeSwitch;
+  if (!theme) return;
+
+  document.body.dataset.theme = theme;
+
+  productSwitch.querySelector(".active").classList.remove("active");
+  button.classList.add("active");
+
+  themeMenus.forEach((menu) => {
+    menu.classList.toggle("active", menu.dataset.menuTheme === theme);
+  });
+
+  themeCopy.forEach((item) => {
+    item.textContent = item.dataset[theme] || "";
+  });
 });
 
 tabs.forEach((tab) => {
