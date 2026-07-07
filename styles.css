@@ -251,6 +251,26 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
   position: relative;
 }
 
+.join-us-menu {
+  position: relative;
+}
+
+.join-us-menu .mega-menu {
+  left: auto;
+  right: 0; /* Align to the right */
+  transform: translateY(12px) scale(0.98);
+}
+
+.join-us-menu:hover .mega-menu,
+.join-us-menu:focus-within .mega-menu,
+.join-us-menu.mega-open .mega-menu {
+  transform: translateY(0) scale(1);
+}
+
+.join-us-menu .theme-menu-panel {
+  grid-template-columns: 1fr;
+}
+
 .context-menu {
   position: static;
 }
