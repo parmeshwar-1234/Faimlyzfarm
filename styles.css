@@ -1998,6 +1998,50 @@ section:not(.hero) {
 
 .benefit-icons span {
   display: grid;
+
+/* Light theme for testimonials */
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .testimonial-summary h2,
+.light-theme .testimonial-summary p,
+.light-theme .trustpilot-mark strong,
+.light-theme .testimonial-card h3,
+.light-theme .testimonial-card p,
+.light-theme .testimonial-card strong,
+.light-theme .testimonial-note {
+  color: #000000;
+}
+
+.light-theme .trust-stars {
+  background-color: #00c77a;
+  color: #ffffff;
+}
+
+.light-theme .trust-stars .muted {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.light-theme .trustpilot-mark {
+  color: #00c77a;
+}
+
+.light-theme .carousel-arrow {
+  background-color: #f0f0f0;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.light-theme .card-rating span:first-child {
+  background-color: #00c77a;
+  color: #ffffff;
+}
+
+.light-theme .card-rating .verified {
+  color: #555555;
+}
   place-items: center;
   min-height: 76px;
   padding: 10px;

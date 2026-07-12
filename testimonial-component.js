@@ -30,7 +30,7 @@ function renderTestimonials(mount, variant = "home") {
 
   const label = variant === "a2" ? "Testimonials" : "Testimonials";
   mount.innerHTML = `
-    <section class="testimonial-strip" aria-labelledby="${variant}-testimonials-title">
+    <section class="testimonial-strip light-theme" aria-labelledby="${variant}-testimonials-title">
       <div class="testimonial-brand">
         <div class="testimonial-summary">
           <h2 id="${variant}-testimonials-title">Excellent</h2>
