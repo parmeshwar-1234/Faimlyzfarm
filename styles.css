@@ -3157,6 +3157,25 @@ section:not(.hero) {
     grid-template-rows: auto;
   }
 
+  .testimonial-strip {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .testimonial-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial-note {
+    grid-column: 1;
+  }
+
   .category-icons {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
