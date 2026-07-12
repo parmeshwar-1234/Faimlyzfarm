@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article | Faimly Farm</title>
+    <meta
+      name="description"
+      content="Faimly Farm article page template for blog stories, guides, and recipes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="post-page" data-theme="ghee">
+    <header class="blog-header">
+      <div class="blog-header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FF</span>
+          <span>
+            <strong>Faimly Farm</strong>
+            <small>Stories, rituals, and recipes</small>
+          </span>
+        </a>
+        <nav class="blog-nav" aria-label="Blog navigation">
+          <a href="index.html">Home</a>
+          <a href="blog.html">Blog</a>
+          <a class="active" href="post.html">Article</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="post-shell">
+      <div class="post-breadcrumbs">
+        <a href="blog.html">Blog</a>
+        <span>/</span>
+        <span data-post="category">Ghee</span>
+        <span>/</span>
+        <strong data-post="title">How bilona ghee supports slow, traditional cooking</strong>
+      </div>
+
+      <article class="post-layout">
+        <div class="post-content">
+          <p class="eyebrow" data-post="tag">Ghee · 8 min read</p>
+          <h1 data-post="title">How bilona ghee supports slow, traditional cooking</h1>
+          <div class="post-meta-row">
+            <span data-post="author">By Faimly Farm Editorial</span>
+            <span data-post="date">May 12, 2026</span>
+            <span>6 comments</span>
+          </div>
+          <img class="post-hero" data-post="heroImage" src="assets/brand/ancient-bilona.png" alt="Blog hero image" />
+
+          <div class="post-body">
+            <p>
+              This reusable article template is built to match the editorial feel of the reference
+              site, while staying inside the Faimly Farm brand system.
+            </p>
+            <h2>Start with the right source</h2>
+            <p>
+              Native milk, careful churn methods, and small-batch packing all play into the final
+              flavour profile.
+            </p>
+            <blockquote>
+              “The best ghee is not just rich. It carries memory, ritual, and consistency.”
+            </blockquote>
+            <h2>Use it where taste matters</h2>
+            <ul>
+              <li>Daily rotis and rice</li>
+              <li>Festive sweets and mithai</li>
+              <li>Light seasoning for vegetables</li>
+            </ul>
+            <p>
+              The article page can be reused for any story by swapping the query-string values in
+              the URL or by linking to a different slug.
+            </p>
+          </div>
+
+          <section class="post-author-card">
+            <img src="assets/brand/farm-cows.jpeg" alt="Editorial author avatar" />
+            <div>
+              <p class="eyebrow">About the author</p>
+              <strong>Faimly Farm Editorial Team</strong>
+              <p>
+                A small editorial desk covering product stories, farm practices, and kitchen
+                rituals.
+              </p>
+            </div>
+          </section>
+
+          <section class="related-posts">
+            <h2>Related stories</h2>
+            <div class="related-grid">
+              <a href="post.html?slug=a2-palate">
+                <img src="assets/brand/a2-deoni.png" alt="" />
+                <strong>What makes A2 ghee feel different?</strong>
+              </a>
+              <a href="post.html?slug=gifting-guide">
+                <img src="assets/brand/red-sindhi.png" alt="" />
+                <strong>Picking the right jar for gifting</strong>
+              </a>
+              <a href="post.html?slug=storage-tips">
+                <img src="assets/brand/cultured-heritage.png" alt="" />
+                <strong>Storage tips that keep aroma intact</strong>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="post-sidebar">
+          <section class="sidebar-card">
+            <p class="eyebrow">Popular</p>
+            <div class="sidebar-list">
+              <a href="post.html?slug=native-breeds">
+                <strong>Native breeds and their milk profile</strong>
+                <span>3 min read</span>
+              </a>
+              <a href="post.html?slug=quick-recipes">
+                <strong>Quick ghee recipes for busy kitchens</strong>
+                <span>4 min read</span>
+              </a>
+              <a href="post.html?slug=festive-gifting">
+                <strong>Festive ghee gift ideas</strong>
+                <span>5 min read</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="sidebar-card newsletter-card">
+            <p class="eyebrow">Join newsletter</p>
+            <h3>Get weekly updates</h3>
+            <p>Fresh stories, product drops, and kitchen notes in one place.</p>
+            <form class="mini-newsletter">
+              <input type="email" placeholder="Email address" aria-label="Email address" />
+              <button type="submit">Join</button>
+            </form>
+          </section>
+        </aside>
+      </article>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const data = {
+        title: params.get("title") || "How bilona ghee supports slow, traditional cooking",
+        category: params.get("category") || "Ghee",
+        tag: params.get("tag") || "Ghee · 8 min read",
+        author: params.get("author") || "By Faimly Farm Editorial",
+        date: params.get("date") || "May 12, 2026",
+        heroImage: params.get("heroImage") || "assets/brand/ancient-bilona.png",
+      };
+
+      document.querySelectorAll("[data-post]").forEach((node) => {
+        const key = node.getAttribute("data-post");
+        if (!key || !(key in data)) return;
+        if (node.tagName === "IMG") {
+          node.src = data[key];
+        } else {
+          node.textContent = data[key];
+        }
+      });
+
+      document.title = `${data.title} | Faimly Farm`;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) {
+        description.setAttribute(
+          "content",
+          `${data.title} - a Faimly Farm editorial article page template.`
+        );
+      }
+    </script>
+  </body>
+</html>

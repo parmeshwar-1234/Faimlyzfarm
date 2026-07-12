@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Faimly Farm</title>
+    <meta
+      name="description"
+      content="Faimly Farm blog listing with articles on ghee, A2 milk, native breeds, rituals, and gifting."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="blog-page" data-theme="ghee">
+    <header class="blog-header">
+      <div class="blog-header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">FF</span>
+          <span>
+            <strong>Faimly Farm</strong>
+            <small>Stories, rituals, and recipes</small>
+          </span>
+        </a>
+        <nav class="blog-nav" aria-label="Blog navigation">
+          <a href="index.html">Home</a>
+          <a class="active" href="blog.html">Blog</a>
+          <a href="product.html">Product</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="blog-shell">
+      <section class="blog-hero">
+        <div class="blog-hero-copy">
+          <p class="eyebrow">From the farm journal</p>
+          <h1>Recipes, rituals, and honest product education</h1>
+          <p>
+            A magazine-style blog listing inspired by the fitness editorial layout you shared,
+            tuned for Faimly Farm stories, guides, and updates.
+          </p>
+        </div>
+        <article class="blog-feature">
+          <img src="assets/brand/farm-cows.jpeg" alt="Featured Faimly Farm story" />
+          <div class="blog-feature-copy">
+            <span>Featured story</span>
+            <h2>Why native cow milk changes the aroma of bilona ghee</h2>
+            <p>
+              A closer look at sourcing, texture, and the small-batch process that shapes taste.
+            </p>
+            <a href="post.html?slug=native-cow-milk">Read story</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="blog-toolbar" aria-label="Blog filters">
+        <a class="chip active" href="#">All</a>
+        <a class="chip" href="#">Ghee</a>
+        <a class="chip" href="#">A2 Milk</a>
+        <a class="chip" href="#">Recipes</a>
+        <a class="chip" href="#">Gifting</a>
+        <a class="chip" href="#">Wellness</a>
+      </section>
+
+      <section class="blog-layout">
+        <div class="blog-feed">
+          <article class="post-card large">
+            <img src="assets/brand/ancient-bilona.png" alt="Ancient bilona ghee story" />
+            <div class="post-card-copy">
+              <p class="post-meta">Ghee · 8 min read</p>
+              <h2>How bilona ghee supports slow, traditional cooking</h2>
+              <p>
+                Build a pantry that keeps pace with everyday rotis, sweets, and festive meals.
+              </p>
+              <a href="post.html?slug=bilona-cooking">Read more</a>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img src="assets/brand/a2-deoni.png" alt="A2 dairy guide" />
+            <div class="post-card-copy">
+              <p class="post-meta">A2 Milk · 6 min read</p>
+              <h2>What makes an A2 ghee story feel different on the palate</h2>
+              <a href="post.html?slug=a2-palate">Read more</a>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img src="assets/brand/cultured-heritage.png" alt="Cultured ghee story" />
+            <div class="post-card-copy">
+              <p class="post-meta">Process · 5 min read</p>
+              <h2>Curd-churned versus clarified ghee: a simple guide</h2>
+              <a href="post.html?slug=curd-churned">Read more</a>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img src="assets/brand/ghee-bowl.jpeg" alt="Recipe blog post" />
+            <div class="post-card-copy">
+              <p class="post-meta">Recipes · 4 min read</p>
+              <h2>Three quick recipes that let ghee do the heavy lifting</h2>
+              <a href="post.html?slug=quick-recipes">Read more</a>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img src="assets/brand/red-sindhi.png" alt="Gift guide article" />
+            <div class="post-card-copy">
+              <p class="post-meta">Gifting · 6 min read</p>
+              <h2>Choosing the right ghee jar for festive and corporate gifting</h2>
+              <a href="post.html?slug=gifting-guide">Read more</a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="blog-sidebar">
+          <section class="sidebar-card newsletter-card">
+            <p class="eyebrow">Newsletter</p>
+            <h3>Stay in the loop</h3>
+            <p>Get new stories, offers, and seasonal kitchen notes.</p>
+            <form class="mini-newsletter">
+              <input type="email" placeholder="Email address" aria-label="Email address" />
+              <button type="submit">Join</button>
+            </form>
+          </section>
+
+          <section class="sidebar-card">
+            <p class="eyebrow">Popular reads</p>
+            <div class="sidebar-list">
+              <a href="post.html?slug=native-breeds">
+                <strong>Native breeds and why they matter</strong>
+                <span>Wellness · 3 min read</span>
+              </a>
+              <a href="post.html?slug=festive-gifting">
+                <strong>How to pick festive ghee boxes</strong>
+                <span>Gifting · 4 min read</span>
+              </a>
+              <a href="post.html?slug=storage-tips">
+                <strong>Storage tips to keep aroma fresh</strong>
+                <span>Tips · 2 min read</span>
+              </a>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
