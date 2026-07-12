@@ -42,6 +42,14 @@ body[data-theme="a2"] {
   --theme-text: #083e29;
 }
 
+body[data-theme="a2"] .ghee-only {
+  display: none !important;
+}
+
+body[data-theme="ghee"] .a2-only {
+  display: none !important;
+}
+
 body.nav-open {
   overflow: hidden;
 }
@@ -488,6 +496,157 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
     color 240ms ease,
     background-color 240ms ease,
     border-color 240ms ease;
+}
+
+.a2-only {
+  padding: 0;
+}
+
+.a2-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
+  gap: clamp(18px, 4vw, 42px);
+  align-items: center;
+  padding: clamp(28px, 5vw, 64px) clamp(18px, 5vw, 64px);
+  background: #fff;
+}
+
+.a2-banner-row,
+.a2-welcome,
+.a2-category-rail,
+.a2-products-band,
+.a2-why,
+.a2-cook,
+.a2-subscription,
+.a2-testimonials,
+.a2-best-sellers {
+  padding: clamp(28px, 4vw, 56px) clamp(18px, 5vw, 64px);
+}
+
+.a2-hero-copy h1 {
+  max-width: 620px;
+  color: var(--theme-deep);
+  font-size: clamp(44px, 6vw, 86px);
+}
+
+.a2-hero .hero-copy {
+  color: #34493a;
+}
+
+.a2-hero-art img {
+  width: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.a2-banner-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.deal-strip {
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  background: #f3e34d;
+  color: #101010;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.a2-welcome {
+  text-align: center;
+  background: #fff;
+}
+
+.a2-pill-row,
+.a2-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.a2-pill-row span {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #eef4ec;
+  color: #284335;
+  font-weight: 900;
+}
+
+.a2-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.a2-chip-grid a {
+  display: grid;
+  place-items: center;
+  min-height: 118px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8faf7;
+  color: #203928;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.a2-chip-grid img {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.a2-products-band,
+.a2-why,
+.a2-cook,
+.a2-subscription,
+.a2-testimonials,
+.a2-best-sellers {
+  background: #fff;
+}
+
+.a2-cook-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.a2-cook-grid article {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8faf7;
+  box-shadow: var(--shadow);
+}
+
+.a2-cook-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.a2-cook-grid h3 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.a2-subscription {
+  text-align: center;
+}
+
+.a2-subscription p {
+  max-width: 680px;
+  margin: 10px auto 20px;
+  color: var(--muted);
 }
 
 .hero {
@@ -1392,6 +1551,12 @@ section:not(.hero) {
   .site-footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .a2-hero,
+  .a2-cook-grid,
+  .a2-chip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -1477,6 +1642,14 @@ section:not(.hero) {
     flex-direction: column;
   }
 
+  .a2-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .a2-hero-art img {
+    min-height: 300px;
+  }
+
   .hero-stats,
   .category-icons,
   .product-grid,
@@ -1485,6 +1658,12 @@ section:not(.hero) {
   .blog-grid,
   .cert-strip,
   .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .a2-banner-row,
+  .a2-cook-grid,
+  .a2-chip-grid {
     grid-template-columns: 1fr;
   }
 

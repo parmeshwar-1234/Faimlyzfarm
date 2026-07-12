@@ -8,8 +8,25 @@ const newsletter = document.querySelector(".newsletter");
 const productSwitch = document.querySelector(".product-switch");
 const themeMenus = document.querySelectorAll(".theme-menu-panel");
 const themeCopy = document.querySelectorAll("[data-theme-copy]");
+const themeRoot = document.body;
+const searchInput = document.querySelector(".header-search input");
+const searchables = document.querySelectorAll(".product-card");
+const themeSections = document.querySelectorAll(".ghee-only, .a2-only");
+const sectionTitleMap = {
+  ghee: {
+    title: "Faimly Farm Ghee | Pure Bilona Churned Ghee",
+    description:
+      "Shop Faimly Farm ghee: pure, bilona churned, fresh, danedar A2 cow, buffalo, blend, puja, combo, and trial ghee.",
+  },
+  a2: {
+    title: "Faimly Farm A2 Ghee | Pure Bilona Churned A2 Ghee",
+    description:
+      "Shop Faimly Farm A2 ghee: native cow bilona ghee, fresh batches, combinations, subscriptions, and best sellers.",
+  },
+};
 
 let cartCount = 0;
+let currentFilter = "all";
 
 menuToggle?.addEventListener("click", () => {
   const isOpen = document.body.classList.toggle("nav-open");
@@ -60,32 +77,18 @@ productSwitch?.addEventListener("click", (event) => {
   const theme = button.dataset.themeSwitch;
   if (!theme) return;
 
-  document.body.dataset.theme = theme;
-
-  productSwitch.querySelector(".active").classList.remove("active");
-  button.classList.add("active");
-
-  themeMenus.forEach((menu) => {
-    menu.classList.toggle("active", menu.dataset.menuTheme === theme);
-  });
-
-  themeCopy.forEach((item) => {
-    item.textContent = item.dataset[theme] || "";
-  });
+  applyTheme(theme);
 });
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const filter = tab.dataset.filter;
-
     tabs.forEach((item) => item.classList.toggle("active", item === tab));
-
-    cards.forEach((card) => {
-      const categories = card.dataset.category?.split(" ") ?? [];
-      card.hidden = filter !== "all" && !categories.includes(filter);
-    });
+    currentFilter = tab.dataset.filter || "all";
+    filterCards();
   });
 });
+
+searchInput?.addEventListener("input", filterCards);
 
 cartActions.forEach((button) => {
   button.addEventListener("click", () => {
@@ -122,3 +125,75 @@ newsletter?.addEventListener("submit", (event) => {
     }, 1400);
   }
 });
+
+function setText(selector, value) {
+  document.querySelectorAll(selector).forEach((element) => {
+    element.textContent = value;
+  });
+}
+
+function applyTheme(theme) {
+  themeRoot.dataset.theme = theme;
+  productSwitch.querySelectorAll("button").forEach((item) => {
+    const isActive = item.dataset.themeSwitch === theme;
+    item.classList.toggle("active", isActive);
+    item.setAttribute("aria-pressed", String(isActive));
+  });
+
+  themeMenus.forEach((menu) => {
+    menu.classList.toggle("active", menu.dataset.menuTheme === theme);
+  });
+
+  themeCopy.forEach((item) => {
+    item.textContent = item.dataset[theme] || "";
+  });
+
+  const meta = sectionTitleMap[theme];
+  if (meta) {
+    document.title = meta.title;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.setAttribute("content", meta.description);
+  }
+
+  themeSections.forEach((section) => {
+    section.hidden = section.classList.contains(`${theme === "a2" ? "ghee" : "a2"}-only`);
+  });
+
+  themeRoot.classList.toggle("theme-a2", theme === "a2");
+  themeRoot.classList.toggle("theme-ghee", theme === "ghee");
+
+  const themeClasses = ["ghee-only", "a2-only"];
+  themeSections.forEach((section) => {
+    section.classList.toggle("is-active", true);
+    themeClasses.forEach((className) => {
+      const shouldHide = theme === "a2" ? className === "ghee-only" : className === "a2-only";
+      section.hidden = section.classList.contains(className) && shouldHide;
+    });
+  });
+
+  if (theme === "a2") {
+    const a2Tab = document.querySelector('.tab[data-filter="a2"]');
+    a2Tab?.click();
+  } else {
+    const allTab = document.querySelector('.tab[data-filter="all"]');
+    allTab?.click();
+  }
+
+  filterCards();
+}
+
+function filterCards() {
+  const theme = themeRoot.dataset.theme || "ghee";
+  const query = (searchInput?.value || "").trim().toLowerCase();
+
+  searchables.forEach((card) => {
+    const categories = card.dataset.category?.split(" ") ?? [];
+    const matchesTheme =
+      theme === "ghee" ? categories.includes("ghee") || categories.includes("cultured") : categories.includes("a2");
+    const matchesFilter = currentFilter === "all" || categories.includes(currentFilter);
+    const matchesQuery = !query || card.textContent.toLowerCase().includes(query);
+    card.hidden = !(matchesTheme && matchesFilter && matchesQuery);
+  });
+}
+
+applyTheme(themeRoot.dataset.theme || "ghee");
