@@ -211,10 +211,13 @@
         </div>
       </section>
 
-      <section class="a2-home a2-only a2-hero" aria-labelledby="a2-hero-title">
-        <div class="a2-hero-copy">
+      <section class="hero a2-hero a2-only" aria-labelledby="a2-hero-title">
+        <div class="hero-media">
+          <img src="assets/brand/farm-cows.jpeg" alt="Native cows in a lush green farm field" />
+        </div>
+        <div class="hero-content">
           <p class="eyebrow">A2 Ghee | native cow milk | bilona churned</p>
-          <h1 id="a2-hero-title">Welcome to Faimly Farm A2 Ghee</h1>
+          <h1 id="a2-hero-title">Faimly Farm A2 Ghee</h1>
           <p class="hero-copy">
             Crafted in small lots from native cow milk and slow-churned bilona ghee for families
             who want a richer everyday staple with a clean, traditional finish.
@@ -223,9 +226,20 @@
             <a class="button primary" href="#a2-products">Shop A2 ghee</a>
             <a class="button secondary" href="#a2-cook">Discover native breeds</a>
           </div>
-        </div>
-        <div class="a2-hero-art">
-          <img src="assets/brand/farm-cows.jpeg" alt="Native cows in a lush green farm field" />
+          <dl class="hero-stats" aria-label="A2 highlights">
+            <div>
+              <dt>Native breeds</dt>
+              <dd>Deoni &amp; Red Sindhi</dd>
+            </div>
+            <div>
+              <dt>Bilona method</dt>
+              <dd>Curd churned</dd>
+            </div>
+            <div>
+              <dt>Small batches</dt>
+              <dd>Freshly packed</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -387,24 +401,7 @@
 
       <section class="a2-only a2-testimonials" aria-labelledby="a2-test-title">
         <div class="commerce-wrap">
-          <h2 id="a2-test-title">Testimonials</h2>
-          <div class="testimonial-grid">
-            <article>
-              <span>“</span>
-              <p>The aroma is deep and the texture is exactly what I wanted for daily cooking.</p>
-              <strong>Mrs. Zeba Dee</strong>
-            </article>
-            <article>
-              <span>“</span>
-              <p>Great for festive sweets. The flavor feels clean and beautifully traditional.</p>
-              <strong>Mr. Dhanpat</strong>
-            </article>
-            <article>
-              <span>“</span>
-              <p>We switched the whole house to A2 ghee after the first jar.</p>
-              <strong>Mr. John Doe</strong>
-            </article>
-          </div>
+          <div data-testimonial-mount data-variant="a2"></div>
         </div>
       </section>
 
@@ -854,26 +851,7 @@
             <button type="submit">Subscribe</button>
           </form>
 
-          <div class="testimonial-heading">
-            <h2>Testimonials</h2>
-          </div>
-          <div class="testimonial-grid">
-            <article>
-              <span>“</span>
-              <p>The bilona aroma feels like a home kitchen. Rich, clean, and perfect for rotis.</p>
-              <strong>Mrs. Zeba Dee</strong>
-            </article>
-            <article>
-              <span>“</span>
-              <p>The A2 ghee has a beautiful grainy texture and a deep, traditional taste.</p>
-              <strong>Mr. Dhanpat</strong>
-            </article>
-            <article>
-              <span>“</span>
-              <p>Our family uses it for cooking, fasting meals, and festive sweets.</p>
-              <strong>Mr. John Doe</strong>
-            </article>
-          </div>
+          <div data-testimonial-mount data-variant="home"></div>
         </div>
       </section>
 
@@ -955,6 +933,7 @@
       </div>
     </footer>
 
+    <script src="testimonial-component.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -503,14 +503,14 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
 }
 
 .a2-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
-  gap: clamp(18px, 4vw, 42px);
-  align-items: center;
-  padding: clamp(22px, 4vw, 48px) clamp(18px, 5vw, 64px) clamp(28px, 5vw, 56px);
+  min-height: calc(100vh - 112px);
+  background: #0f2a1b;
+}
+
+.a2-hero .hero-media::after {
   background:
-    linear-gradient(180deg, #ffffff 0%, #ffffff 64%, #f8faf7 100%);
-  border-bottom: 1px solid rgba(12, 32, 18, 0.08);
+    linear-gradient(90deg, rgba(7, 75, 48, 0.88), rgba(7, 75, 48, 0.5) 42%, rgba(7, 75, 48, 0.08)),
+    linear-gradient(0deg, rgba(5, 40, 26, 0.34), rgba(5, 40, 26, 0));
 }
 
 .a2-banner-row,
@@ -525,22 +525,21 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
   padding: clamp(28px, 4vw, 56px) clamp(18px, 5vw, 64px);
 }
 
-.a2-hero-copy h1 {
-  max-width: 620px;
-  color: var(--theme-deep);
-  font-size: clamp(40px, 5.4vw, 78px);
+.a2-hero .hero-content h1 {
+  max-width: 700px;
+  color: var(--theme-accent);
 }
 
 .a2-hero .hero-copy {
-  color: #34493a;
+  color: rgba(241, 255, 245, 0.9);
 }
 
-.a2-hero-art img {
-  width: 100%;
-  min-height: 420px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+.a2-hero .hero-stats div {
+  background: rgba(8, 66, 41, 0.38);
+}
+
+.a2-hero .hero-stats dd {
+  color: rgba(241, 255, 245, 0.74);
 }
 
 .a2-banner-row {
@@ -1581,56 +1580,145 @@ section:not(.hero) {
   cursor: pointer;
 }
 
-.testimonial-heading {
-  margin-top: 54px;
+.testimonial-strip {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 42px;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  padding: 14px 0;
 }
 
-.testimonial-heading h2 {
-  text-align: left;
+.testimonial-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-summary {
+  min-width: 220px;
+  text-align: center;
+}
+
+.testimonial-summary h2 {
+  margin: 0;
+  color: #222;
   font-family: "Manrope", sans-serif;
   font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 26px;
-  text-align: left;
+.trust-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: #00b67a;
+  color: #fff;
 }
 
-.testimonial-grid article {
-  position: relative;
-  min-height: 190px;
-  padding: 36px 22px 22px;
-  border-radius: 8px;
-  color: #1e160b;
-  background: var(--theme-accent);
-}
-
-.testimonial-grid span {
-  position: absolute;
-  top: -22px;
-  left: 24px;
-  display: grid;
-  place-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  color: var(--theme-accent);
-  background: var(--theme-deep);
-  font-family: Georgia, serif;
-  font-size: 54px;
+.trust-stars span {
+  font-size: 18px;
   line-height: 1;
 }
 
-.testimonial-grid p {
-  font-size: 13px;
-  line-height: 1.6;
+.trust-stars .muted {
+  color: rgba(255, 255, 255, 0.45);
 }
 
-.testimonial-grid strong {
-  font-size: 12px;
+.testimonial-summary p {
+  margin: 10px 0 0;
+  color: #3a3a3a;
+  font-size: 14px;
+}
+
+.trustpilot-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #00b67a;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.trustpilot-mark span {
+  font-size: 22px;
+}
+
+.carousel-arrow {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  background: #fff;
+  color: #222;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  min-width: 0;
+}
+
+.testimonial-card {
+  min-width: 0;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.card-rating span:first-child {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px 6px;
+  background: #00b67a;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.card-rating .verified {
+  color: #6d6d6d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.testimonial-card h3 {
+  margin: 0;
+  color: #222;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.testimonial-card p {
+  margin: 8px 0 10px;
+  color: #474747;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.testimonial-card strong {
+  color: #666;
+  font-size: 13px;
+}
+
+.testimonial-note {
+  grid-column: 2;
+  margin: 0;
+  color: #444;
+  font-size: 14px;
 }
 
 .blog-grid {
@@ -2792,8 +2880,7 @@ section:not(.hero) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .benefit-row,
-  .testimonial-grid {
+  .benefit-row {
     grid-template-columns: 1fr;
   }
 
@@ -2818,6 +2905,25 @@ section:not(.hero) {
   .showcase-grid,
   .a2-feature-layout {
     gap: 18px;
+  }
+
+  .testimonial-strip {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .testimonial-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .testimonial-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .testimonial-note {
+    grid-column: 1;
   }
 
   .hero-content {
