@@ -335,13 +335,10 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
   min-width: 220px;
 }
 
-.theme-menu-panel[data-menu-theme="a2"] {
-  display: none;
-}
-
 .theme-menu-panel[data-menu-theme="a2"].active {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: max-content;
 }
 
 .mega-column {
