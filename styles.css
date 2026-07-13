@@ -270,6 +270,8 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
 .special-offer-menu .mega-menu {
   left: auto;
   right: 0;
+  min-width: 0;
+  max-width: min(420px, calc(100vw - 28px));
   transform: translateY(12px) scale(0.98);
 }
 
@@ -280,11 +282,27 @@ body[data-theme="a2"] .mega-item:hover > .mega-trigger {
 }
 
 .special-offer-menu .theme-menu-panel {
+  width: auto;
   grid-template-columns: 1fr;
 }
 
+.special-offer-menu .theme-menu-panel.active {
+  display: block;
+}
+
 .special-column a {
+  max-width: 100%;
   white-space: normal;
+}
+
+.special-offer-menu .special-column {
+  min-width: 0;
+  width: 100%;
+}
+
+body[data-theme="a2"] .special-offer-menu .mega-menu {
+  right: 0;
+  left: auto;
 }
 
 .join-us-menu .mega-menu {
