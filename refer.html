@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refer and Earn | Faimly Farm</title>
+    <meta
+      name="description"
+      content="Faimly Farm refer and earn page with rewards, how it works, bonus details, and terms."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="ghee" class="refer-page">
+    <div class="offer-ticker" aria-label="Current offer">
+      <div class="ticker-track">
+        <span>Use code HOME (Ends TODAY!) to get up to 65% off + additional bank offers</span>
+        <span>Use code HOME (Ends TODAY!) to get up to 65% off + additional bank offers</span>
+        <span>Use code HOME (Ends TODAY!) to get up to 65% off + additional bank offers</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="header-main">
+        <a class="brand" href="index.html#top" aria-label="Faimly Farm home">
+          <span class="brand-mark">FF</span>
+          <span>
+            <strong>Faimly Farm</strong>
+          </span>
+        </a>
+
+        <div class="product-switch" role="group" aria-label="Choose homepage">
+          <button class="active" type="button" data-theme-switch="ghee" aria-pressed="true">
+            Ghee
+          </button>
+          <button type="button" data-theme-switch="a2" aria-pressed="false">A2 Ghee</button>
+        </div>
+
+        <label class="header-search">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search products</span>
+          <input type="search" placeholder="Search Faimly Farm" />
+        </label>
+
+        <div class="header-actions">
+          <button class="icon-button delivery-button" type="button" aria-label="Track delivery">
+            <span aria-hidden="true">↗</span>
+          </button>
+          <button class="icon-button" type="button" aria-label="Wishlist">
+            <span aria-hidden="true">♡</span>
+          </button>
+          <button class="icon-button account-button" type="button" aria-label="Account">
+            <span aria-hidden="true">○</span>
+          </button>
+          <button class="cart-button" type="button">
+            Cart
+            <span>0</span>
+          </button>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <div class="mega-item context-menu">
+          <button
+            class="mega-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="contextMegaMenu"
+          >
+            <span data-theme-copy data-ghee="Shop Ghee" data-a2="Shop A2 Ghee">Shop Ghee</span>
+          </button>
+          <div class="mega-menu context-mega" id="contextMegaMenu">
+            <div class="theme-menu-panel active" data-menu-theme="ghee">
+              <div class="mega-columns-wrap">
+                <div class="mega-column categories-column">
+                  <a href="#products">Cow Ghee</a>
+                  <a href="#products">Buffalo Ghee</a>
+                  <a href="#products">Cow &amp; Buffalo Ghee</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-yellow" href="#products">
+                    <span class="promo-kicker">Trending</span>
+                    <strong>100% Pure Ghee Range</strong>
+                    <p>Freshly churned, family-ready ghee for every kitchen.</p>
+                  </a>
+                  <a class="mega-promo-card promo-card-green" href="#trial">
+                    <span class="promo-kicker">Try it first</span>
+                    <strong>Sampler Kits & Trial Packs</strong>
+                    <p>Perfect for first-time buyers and gifting moments.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="theme-menu-panel" data-menu-theme="a2">
+              <div class="mega-columns-wrap mega-columns-wrap-a2">
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="#a2-products">Shop All</a>
+                  <a href="#a2-products">C.O.W Ghee</a>
+                  <a href="#a2-products">Bilona Churned Ghee</a>
+                  <a href="#a2-products">Sampler Kit</a>
+                  <a href="#a2-products">Newly Launched</a>
+                </div>
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="#a2-products">Shop By</a>
+                  <a href="#a2-products">Shop By Fresh A2 Ghee</a>
+                  <a href="#a2-products">Shop By Organica</a>
+                  <a href="#a2-products">Shop By Lab Certified</a>
+                  <a href="#a2-products">Shop By Top Ratings</a>
+                </div>
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="#a2-products">Shop For</a>
+                  <a href="#gifting">Shop for Faimly</a>
+                  <a href="#gifting">Shop for Healthy Gifting</a>
+                  <a href="#a2-cook">Shop for Cooking</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-a2" href="#a2-products">
+                    <span class="promo-kicker">Fresh A2</span>
+                    <strong>Native Cow Milk, Bilona Churned</strong>
+                    <p>Built for families who want a lighter, richer everyday staple.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="ghee-offers.html">Hot Price</a>
+        <a href="#products">Best Seller</a>
+        <a href="ghee-offers.html">Puja Ghee</a>
+        <a href="#trial">Free Trial</a>
+        <a href="#guide">Ghee Guide</a>
+        <div class="mega-item a2-only">
+          <button
+            class="mega-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="blogMegaMenu"
+          >
+            <span>Blog</span>
+          </button>
+          <div class="mega-menu" id="blogMegaMenu" data-menu-theme="a2">
+            <div class="theme-menu-panel active">
+              <div class="mega-columns-wrap">
+                <div class="mega-column">
+                  <a href="#blog">Recipes & Rasoi</a>
+                  <a href="#blog">Health & Wellness</a>
+                  <a href="#blog">Tradition & Culture</a>
+                  <a href="#blog">Faimly Farm Gallery</a>
+                  <a href="#blog">Everyday LookBook</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-dark" href="#blog">
+                    <span class="promo-kicker">Read More</span>
+                    <strong>Farm Stories & Kitchen Notes</strong>
+                    <p>Short reads, seasonal recipes, and behind-the-scenes updates.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="ghee-offers.html">Ghee Combos / Trio</a>
+        <a href="ghee-offers.html">Sale</a>
+        <div class="mega-item special-offer-menu">
+          <button
+            class="mega-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="specialOfferMegaMenu"
+          >
+            <span>Special Offer</span>
+          </button>
+          <div class="mega-menu special-offer-mega" id="specialOfferMegaMenu">
+            <div class="theme-menu-panel active" data-menu-theme="ghee">
+              <div class="mega-columns-wrap">
+                <div class="mega-column special-column">
+                  <a href="ghee-offers.html#offers-grid">VIP Offers</a>
+                  <a href="ghee-offers.html#offers-grid">Value Saver</a>
+                  <a href="ghee-offers.html#offers-grid">Pick Any</a>
+                  <a href="ghee-offers.html#offers-grid">Deals &amp; Discounts</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-special" href="ghee-offers.html#offers-grid">
+                    <span class="promo-kicker">This week</span>
+                    <strong>Limited-time curated savings</strong>
+                    <p>Pick bundles, festive offers, and gifting-friendly deals.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="theme-menu-panel" data-menu-theme="a2">
+              <div class="mega-columns-wrap">
+                <div class="mega-column special-column">
+                  <a href="ghee-offers.html#offers-grid">ENJOY OFFERS ON YOUR 1ST, 2ND, AND 3RD PURCHASE</a>
+                  <a href="ghee-offers.html#offers-grid">UP TO 21% OFF ON NEW ORDER</a>
+                  <a href="ghee-offers.html#offers-grid">DEALS OF THIS WEEK</a>
+                  <a href="ghee-offers.html#offers-grid">Grab More Offers</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-a2" href="ghee-offers.html#offers-grid">
+                    <span class="promo-kicker">A2 benefits</span>
+                    <strong>Unlock better price ladders</strong>
+                    <p>Use offers across first, second, and third purchases.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mega-item join-us-menu">
+          <button
+            class="mega-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="joinUsMegaMenu"
+          >
+            <span>Join Us</span>
+          </button>
+          <div class="mega-menu context-mega" id="joinUsMegaMenu">
+            <div class="theme-menu-panel active">
+              <div class="mega-columns-wrap">
+                <div class="mega-column join-column">
+                  <span class="mega-heading join-heading">Join Us</span>
+                  <a href="#gifting">Brand Collaborations</a>
+                  <a href="#gifting">Corporate Gifting</a>
+                  <a href="#gifting">Ghee Subscription Plans</a>
+                  <a href="#gifting">Franchise Opportunities</a>
+                  <a href="#gifting">Wholesale &amp; Distribution</a>
+                  <a href="#gifting">Private Label &amp; White Label</a>
+                  <a href="#gifting">Retail Partnerships</a>
+                  <a href="#gifting">Contact Us</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-dark" href="#gifting">
+                    <span class="promo-kicker">Partner with us</span>
+                    <strong>Corporate, retail, and private label</strong>
+                    <p>Build long-term partnerships around gifting and distribution.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="refer-shell">
+      <section class="refer-hero">
+        <div class="refer-hero-copy">
+          <p class="eyebrow">Refer and earn</p>
+          <h1>You earn ₹200, your friends earn ₹200</h1>
+          <p>
+            Share your referral link and earn rewards together. We keep the page simple, visual,
+            and easy to act on from mobile or desktop.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#how-it-works">Login now</a>
+          </div>
+        </div>
+        <div class="refer-hero-art" aria-hidden="true">
+          <div class="coin coin-large">₹</div>
+          <div class="coin coin-small">₹</div>
+          <div class="coin coin-small alt">₹</div>
+          <div class="refer-people">
+            <span class="person p1"></span>
+            <span class="person p2"></span>
+            <span class="person p3"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="refer-how" id="how-it-works" aria-labelledby="how-title">
+        <div class="refer-section-head">
+          <h2 id="how-title">How It Works ?</h2>
+        </div>
+        <div class="refer-grid">
+          <div class="refer-steps">
+            <article>
+              <span>1</span>
+              <p>Share the referral link or send invites to your friend.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <p>Your friend will get the reward of ₹200 as their wallet cash.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <p>You get ₹200 wallet cash for every friend that makes a purchase.</p>
+            </article>
+          </div>
+          <aside class="refer-bonus">
+            <h3>Your Referral Bonus</h3>
+            <div class="bonus-card">
+              <div class="bonus-card-head">Make the most of referral coins</div>
+              <div class="bonus-card-body">
+                <strong>7273 Faimly customers</strong>
+                <span>saved ₹1725374 via referral</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="terms-panel" id="terms" aria-labelledby="terms-title">
+        <div class="terms-card">
+          <div class="terms-head">
+            <h2 id="terms-title">Terms &amp; Conditions</h2>
+          </div>
+          <div class="terms-body">
+            <p><strong>Offers:</strong></p>
+            <p>
+              When your referred friend shops at Faimly Farm, you get upto 2% of their shopping
+              value as reward in the form of points.
+            </p>
+            <p>This offer will be valid under the following conditions:</p>
+            <ol>
+              <li>Any individual person other than an existing Faimly Farm customer can be referred.</li>
+              <li>Your friends earn 200 points once they sign up via your link and are valid for 7 days.</li>
+              <li>You earn 200 points once your referred friend’s order is complete.</li>
+              <li>The points are redeemable only on eligible Faimly Farm products.</li>
+              <li>The referred friend can purchase any item on the site.</li>
+              <li>The value of each point shall be equal to 1 rupee.</li>
+              <li>Bank offers can be used in addition to referral points, subject to cart value.</li>
+              <li>For partial cancellations, points are credited back for the cancelled item portion.</li>
+              <li>Maximum referral points redeemable in a year by one person is capped at INR 10,000.</li>
+              <li>The points are non transferable and non assignable to any person.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="gifting">
+      <div>
+        <h3>Shop</h3>
+        <a href="#products">New Arrivals</a>
+        <a href="#a2-home">A2 Ghee</a>
+        <a href="#products">Ghee</a>
+        <a href="#products">Everyday Energy Ghee</a>
+        <a href="#products">Be Fresh</a>
+        <a href="#products">Shop A2 Desi Ghee</a>
+      </div>
+      <div>
+        <h3>Farm Guides</h3>
+        <a href="#guide">About Faimly Farm</a>
+        <a href="blog.html">In the Press</a>
+        <a href="blog.html">Health Guide</a>
+        <a href="blog.html">Education &amp; Blog</a>
+        <a href="refer.html">Make Money with Us</a>
+        <a href="#top">Store Location</a>
+      </div>
+      <div>
+        <h3>Let Us Help</h3>
+        <a href="#footer">Track Your Order</a>
+        <a href="#top">Rewards T&amp;C's</a>
+        <a href="#top">Shipping &amp; Returns</a>
+        <a href="#top">Privacy Policy</a>
+        <a href="#top">Terms &amp; Conditions</a>
+        <a href="#top">Cancellation &amp; Refund</a>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <a href="#footer">Search Terms</a>
+        <a href="#top">Advanced Search</a>
+        <a href="#top">Orders &amp; Returns</a>
+        <a href="#top">Contact Us</a>
+        <a href="#top">FAQs</a>
+        <a href="#top">Consultant Services</a>
+      </div>
+    </footer>
+
+    <script src="testimonial-component.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
