@@ -497,7 +497,7 @@ body[data-theme="a2"] .special-offer-menu .mega-menu {
 
 .green-heading {
   color: #fff !important;
-  background: var(--theme-deep);
+  background: #000;
 }
 
 .join-heading {
