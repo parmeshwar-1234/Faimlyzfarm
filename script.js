@@ -12,6 +12,7 @@ const themeRoot = document.body;
 const searchInput = document.querySelector(".header-search input");
 const searchables = document.querySelectorAll(".product-card");
 const themeSections = document.querySelectorAll(".ghee-only, .a2-only");
+const carousels = document.querySelectorAll("[data-carousel]");
 const sectionTitleMap = {
   ghee: {
     title: "Faimly Farm Ghee | Pure Bilona Churned Ghee",
@@ -68,6 +69,24 @@ document.addEventListener("click", (event) => {
       item.querySelector(".mega-trigger")?.setAttribute("aria-expanded", "false");
     });
   }
+});
+
+carousels.forEach((viewport) => {
+  const shell = viewport.closest(".carousel-shell");
+  const prev = shell?.querySelector(".carousel-prev");
+  const next = shell?.querySelector(".carousel-next");
+  const slide = viewport.querySelector(".carousel-slide");
+
+  const scrollByCard = (direction) => {
+    const cardWidth = slide?.getBoundingClientRect().width || 260;
+    viewport.scrollBy({
+      left: direction * (cardWidth + 18),
+      behavior: "smooth",
+    });
+  };
+
+  prev?.addEventListener("click", () => scrollByCard(-1));
+  next?.addEventListener("click", () => scrollByCard(1));
 });
 
 productSwitch?.addEventListener("click", (event) => {

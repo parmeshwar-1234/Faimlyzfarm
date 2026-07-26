@@ -43,7 +43,7 @@ function renderTestimonials(mount, variant = "home") {
             <strong>Trustpilot</strong>
           </div>
         </div>
-        <button class="carousel-arrow" type="button" aria-label="Previous reviews">‹</button>
+        <button class="testimonial-arrow testimonial-arrow-prev" type="button" aria-label="Previous reviews">‹</button>
       </div>
 
       <div class="testimonial-cards" role="list" aria-label="${label}">
@@ -64,7 +64,7 @@ function renderTestimonials(mount, variant = "home") {
           .join("")}
       </div>
 
-      <button class="carousel-arrow right" type="button" aria-label="Next reviews">›</button>
+      <button class="testimonial-arrow testimonial-arrow-next" type="button" aria-label="Next reviews">›</button>
       <p class="testimonial-note">Showing our 4 &amp; 5 star reviews</p>
     </section>
   `;
