@@ -1616,6 +1616,97 @@ section:not(.hero):not(.a2-science):not(.science-grid) {
   margin-bottom: 18px;
 }
 
+.collection-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.collection-copy,
+.collection-sidecard {
+  padding: 26px;
+  border: 1px solid rgba(18, 35, 23, 0.08);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(245, 251, 244, 0.96), rgba(233, 245, 230, 0.96));
+}
+
+.collection-copy p,
+.collection-sidecard p {
+  margin: 0;
+}
+
+.collection-copy .eyebrow {
+  margin-bottom: 10px;
+}
+
+.collection-lead {
+  max-width: 66ch;
+  color: #355241;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.collection-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.collection-highlights span {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid rgba(18, 35, 23, 0.12);
+  border-radius: 999px;
+  color: #183523;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+}
+
+.collection-sidecard {
+  background: linear-gradient(135deg, rgba(22, 107, 65, 0.95), rgba(146, 198, 102, 0.95));
+  color: #f7fff7;
+}
+
+.collection-sidecard strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.collection-sidecard p {
+  color: rgba(247, 255, 247, 0.86);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.collection-sidecard .sidecard-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.collection-sidecard .sidecard-meta span {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.collection-sidecard .sidecard-meta strong {
+  margin: 0;
+  font-size: 15px;
+}
+
 .collection-page .breadcrumbs {
   color: var(--muted);
   font-size: 12px;
@@ -1719,6 +1810,58 @@ section:not(.hero):not(.a2-science):not(.science-grid) {
   background: #fff;
 }
 
+.collection-page .product-card .product-body span {
+  min-height: 48px;
+  margin-top: 6px;
+  color: #5b6c61;
+}
+
+.collection-page .product-card .rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  color: #bd8b15;
+}
+
+.collection-page .product-card .rating small {
+  color: #748076;
+  font-size: 11px;
+}
+
+.collection-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.collection-price s {
+  color: #9a9a9a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.collection-page .product-card .add-cart {
+  width: 100%;
+  min-height: 40px;
+  margin-top: 14px;
+  border-radius: 0;
+  color: #fff;
+  background: #0b0b0b;
+}
+
+.collection-footnote {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+  color: #66746a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .collection-pagination {
   display: flex;
   justify-content: center;
@@ -1747,6 +1890,24 @@ section:not(.hero):not(.a2-science):not(.science-grid) {
 
 .collection-pagination .next {
   min-width: 76px;
+}
+
+@media (max-width: 960px) {
+  .collection-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .collection-sidecard .sidecard-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-footnote {
+    flex-direction: column;
+  }
 }
 
 .product-card {
