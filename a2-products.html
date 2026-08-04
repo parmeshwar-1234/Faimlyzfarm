@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A2 Ghee Products | Faimly Farm</title>
+    <meta
+      name="description"
+      content="A2 ghee collection page with filter controls, product grid, and pagination."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="a2" class="collection-page">
+    <div class="offer-ticker" aria-label="Current offer">
+      <div class="ticker-track">
+        <span>Get 10% off on your 1st order apply code first10 at checkout</span>
+        <span>Get 10% off on your 1st order apply code first10 at checkout</span>
+        <span>Get 10% off on your 1st order apply code first10 at checkout</span>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="header-main">
+        <a class="brand" href="index.html#top" aria-label="Faimly Farm home">
+          <span class="brand-mark">FF</span>
+          <span><strong>Faimly Farm</strong></span>
+        </a>
+
+        <div class="product-switch" role="group" aria-label="Choose homepage">
+          <button type="button" data-theme-switch="ghee" aria-pressed="false">Ghee</button>
+          <button class="active" type="button" data-theme-switch="a2" aria-pressed="true">
+            A2 Ghee
+          </button>
+        </div>
+
+        <label class="header-search">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">Search products</span>
+          <input type="search" placeholder="Search anything" />
+        </label>
+
+        <div class="header-actions">
+          <button class="icon-button delivery-button" type="button" aria-label="Track delivery">
+            <span aria-hidden="true">↗</span>
+          </button>
+          <button class="icon-button" type="button" aria-label="Wishlist">
+            <span aria-hidden="true">♡</span>
+          </button>
+          <button class="icon-button account-button" type="button" aria-label="Account">
+            <span aria-hidden="true">○</span>
+          </button>
+          <button class="cart-button" type="button">
+            Cart
+            <span>0</span>
+          </button>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+        <div class="mega-item context-menu">
+          <button class="mega-trigger" type="button" aria-expanded="false" aria-controls="contextMegaMenu">
+            <span data-theme-copy data-ghee="Shop Ghee" data-a2="Shop A2 Ghee">Shop A2 Ghee</span>
+          </button>
+          <div class="mega-menu context-mega" id="contextMegaMenu">
+            <div class="theme-menu-panel active" data-menu-theme="ghee">
+              <div class="mega-columns-wrap">
+                <div class="mega-column categories-column">
+                  <a href="index.html#products">Cow Ghee</a>
+                  <a href="index.html#products">Buffalo Ghee</a>
+                  <a href="index.html#products">Cow &amp; Buffalo Ghee</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-yellow" href="index.html#products">
+                    <span class="promo-kicker">Trending</span>
+                    <strong>100% Pure Ghee Range</strong>
+                    <p>Freshly churned, family-ready ghee for every kitchen.</p>
+                  </a>
+                  <a class="mega-promo-card promo-card-green" href="index.html#trial">
+                    <span class="promo-kicker">Try it first</span>
+                    <strong>Sampler Kits & Trial Packs</strong>
+                    <p>Perfect for first-time buyers and gifting moments.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="theme-menu-panel active" data-menu-theme="a2">
+              <div class="mega-columns-wrap mega-columns-wrap-a2">
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="a2-products.html">Shop All</a>
+                  <a href="a2-products.html">C.O.W Ghee</a>
+                  <a href="a2-products.html">Bilona Churned Ghee</a>
+                  <a href="a2-products.html">Sampler Kit</a>
+                  <a href="a2-products.html">Newly Launched</a>
+                </div>
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="a2-products.html">Shop By</a>
+                  <a href="a2-products.html">Shop By Fresh A2 Ghee</a>
+                  <a href="a2-products.html">Shop By Organica</a>
+                  <a href="a2-products.html">Shop By Lab Certified</a>
+                  <a href="a2-products.html">Shop By Top Ratings</a>
+                </div>
+                <div class="mega-column a2-menu-column">
+                  <a class="mega-heading green-heading" href="a2-products.html">Shop For</a>
+                  <a href="refer.html">Shop for Faimly</a>
+                  <a href="refer.html">Shop for Healthy Gifting</a>
+                  <a href="combos-trio.html">Shop for Cooking</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-a2" href="a2-products.html">
+                    <span class="promo-kicker">Fresh A2</span>
+                    <strong>Native Cow Milk, Bilona Churned</strong>
+                    <p>Built for families who want a lighter, richer everyday staple.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="ghee-offers.html">Hot Price</a>
+        <a href="a2-products.html" class="active">Products</a>
+        <a href="ghee-offers.html">Puja Ghee</a>
+        <a href="#trial">Free Trial</a>
+        <a href="tradition-culture.html">Tradition &amp; Culture</a>
+        <a href="combos-trio.html">Ghee Combos / Trio</a>
+        <a href="refer.html">Refer</a>
+        <div class="mega-item special-offer-menu">
+          <button class="mega-trigger" type="button" aria-expanded="false" aria-controls="specialOfferMegaMenu">
+            <span>Special Offer</span>
+          </button>
+          <div class="mega-menu special-offer-mega" id="specialOfferMegaMenu">
+            <div class="theme-menu-panel active" data-menu-theme="a2">
+              <div class="mega-columns-wrap">
+                <div class="mega-column special-column">
+                  <a href="ghee-offers.html#offers-grid">ENJOY OFFERS ON YOUR 1ST, 2ND, AND 3RD PURCHASE</a>
+                  <a href="ghee-offers.html#offers-grid">UP TO 21% OFF ON NEW ORDER</a>
+                  <a href="ghee-offers.html#offers-grid">DEALS OF THIS WEEK</a>
+                  <a href="ghee-offers.html#offers-grid">Grab More Offers</a>
+                </div>
+                <div class="mega-promo-grid">
+                  <a class="mega-promo-card promo-card-a2" href="ghee-offers.html#offers-grid">
+                    <span class="promo-kicker">A2 benefits</span>
+                    <strong>Unlock better price ladders</strong>
+                    <p>Use offers across first, second, and third purchases.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="collection-shell">
+      <div class="commerce-wrap">
+        <div class="collection-header">
+          <div class="breadcrumbs">Home / Products</div>
+          <h1 class="collection-title">PRODUCTS</h1>
+        </div>
+
+        <section class="collection-toolbar" aria-label="Collection filters">
+          <div class="collection-filters">
+            <button type="button">SIZE</button>
+            <button type="button">PRICE</button>
+            <button type="button">BRAND</button>
+            <button type="button">AVAILABILITY</button>
+            <button type="button">PRODUCT TYPE</button>
+          </div>
+          <div class="collection-controls">
+            <div class="collection-view-toggle" aria-label="View mode">
+              <button class="active" type="button" aria-pressed="true">▥</button>
+              <button type="button" aria-pressed="false">▤</button>
+              <button type="button" aria-pressed="false">▦</button>
+            </div>
+            <div class="collection-meta-controls">
+              <label>
+                Items Per Page
+                <select>
+                  <option>20</option>
+                  <option>12</option>
+                  <option>24</option>
+                </select>
+              </label>
+              <label>
+                Sort By
+                <select>
+                  <option>Alphabetical</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-grid collection-grid" aria-label="A2 products">
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/a2-deoni.png" alt="A2 Bachur Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bachur Cow Ghee</h3><strong>Rs. 1,047.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/farm-cows.jpeg" alt="A2 Badri Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Badri Cow Ghee</h3><strong>Rs. 1,111.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/red-sindhi.png" alt="A2 Bilona Buffalo Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Buffalo Ghee</h3><strong>Rs. 661.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/cultured-heritage.png" alt="A2 Bilona Buffalo Ghee Family Combo" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Buffalo Ghee Family Combo</h3><strong>Rs. 1,653.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/ancient-bilona.png" alt="A2 Bilona Cow & Buffalo Blend Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Cow & Buffalo Blend Ghee</h3><strong>Rs. 914.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/ghee-bowl.jpeg" alt="A2 Bilona Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Cow Ghee</h3><strong>Rs. 1,160.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/farm-cows.jpeg" alt="A2 Bilona Cow Ghee Celebration Pack" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Cow Ghee Celebration Pack</h3><strong>Rs. 2,690.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/a2-deoni.png" alt="A2 Bilona Ghee Family Value Twin Pack" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Ghee Family Value Twin Pack</h3><strong>Rs. 4,215.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/cultured-heritage.png" alt="A2 Bilona Ghee Festive Pack" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Ghee Festive Pack</h3><strong>Rs. 2,074.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/red-sindhi.png" alt="A2 Bilona Ghee Kitchen Duo Pack" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Ghee Kitchen Duo Pack</h3><strong>Rs. 2,963.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/ancient-bilona.png" alt="A2 Bilona Ghee Trio Ghee Pack" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Bilona Ghee Trio Ghee Pack</h3><strong>Rs. 7,816.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/farm-cows.jpeg" alt="A2 Deoni Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Deoni Cow Ghee</h3><strong>Rs. 1,253.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/a2-deoni.png" alt="A2 Gangati Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Gangati Cow Ghee</h3><strong>Rs. 1,293.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/cultured-heritage.png" alt="A2 Gaalo Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Gaalo Cow Ghee</h3><strong>Rs. 1,160.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/ghee-bowl.jpeg" alt="A2 Gir Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Gir Cow Ghee</h3><strong>Rs. 1,077.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+          <article class="product-card"><div class="badge">SALE</div><img src="assets/brand/red-sindhi.png" alt="A2 Halikar Cow Ghee" /><div class="product-body"><p>Faimly Farm</p><h3>A2 Halikar Cow Ghee</h3><strong>Rs. 1,097.00</strong><button class="add-cart" type="button">ADD TO CART</button></div></article>
+        </section>
+
+        <div class="collection-pagination" aria-label="Pagination">
+          <span class="active">1</span>
+          <a href="#top">2</a>
+          <a href="#top">3</a>
+          <span>…</span>
+          <a href="#top">12</a>
+          <a class="next" href="#top">Next</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div>
+        <h3>Shop</h3>
+        <a href="index.html#products">New Arrivals</a>
+        <a href="index.html#a2-home">A2 Ghee</a>
+        <a href="index.html">Ghee</a>
+        <a href="ghee-offers.html">Everyday Energy Ghee</a>
+        <a href="ghee-offers.html">Be Fresh</a>
+        <a href="a2-products.html">Shop A2 Desi Ghee</a>
+      </div>
+      <div>
+        <h3>Farm Guides</h3>
+        <a href="index.html#guide">About Faimly Farm</a>
+        <a href="blog.html">In the Press</a>
+        <a href="blog.html">Health Guide</a>
+        <a href="blog.html">Education &amp; Blog</a>
+        <a href="refer.html">Make Money with Us</a>
+        <a href="#top">Store Location</a>
+      </div>
+      <div>
+        <h3>Let Us Help</h3>
+        <a href="#footer">Track Your Order</a>
+        <a href="#top">Rewards T&amp;C's</a>
+        <a href="#top">Shipping &amp; Returns</a>
+        <a href="#top">Privacy Policy</a>
+        <a href="#top">Terms &amp; Conditions</a>
+        <a href="#top">Cancellation &amp; Refund</a>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <a href="#footer">Search Terms</a>
+        <a href="#top">Advanced Search</a>
+        <a href="#top">Orders &amp; Returns</a>
+        <a href="#top">Contact Us</a>
+        <a href="#top">FAQs</a>
+        <a href="#top">Consultant Services</a>
+      </div>
+    </footer>
+
+    <script src="testimonial-component.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
